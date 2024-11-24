@@ -27,7 +27,8 @@ The class must include the following methods:
 •	Calculate the density of the planet, as the quotient between its mass and its volume.
 •	Determine whether a planet in the solar system is considered outer.
 •	An outer planet is located beyond the asteroid belt. The asteroid belt is located between 2.1 and 3.4 AU. One astronomical unit (AU) is the distance from Earth to the Sun = 1,495,978,70 km.
-•	In the main method of the App class, two planets must be created and the values of their attributes must be displayed on the screen. In addition, the density of each planet must be printed and whether the planet is an outer planet of the solar system.
+•	In the main method of the App class, two planets must be created and the values of their attributes must be displayed on the screen. 
+    In addition, the density of each planet must be printed and whether the planet is an outer planet of the solar system.
 Extension:
 
 •	Add two attributes to the Planet class. The first should represent the planet's orbital period (in years). The second attribute represents the rotation period (in days).
@@ -85,3 +86,35 @@ Entregables:
 •	Enlace al repositorio de Github
 •	Captura de pantalla de la sección "Testing" de visual studio code donde se aprecia el coverage de los tests
 
+anet	Number of Satellites	Mass (kg)	Volume (km³)	Diameter (km)	Mean Distance from Sun (million km)	Type of Planet	Observable with Naked Eye
+Mercury	0	3.3011 × 10²³	6.083 × 10¹⁰	4,880	57.9	Terrestrial	Yes
+Venus	0	4.8675 × 10²⁴	9.2843 × 10¹¹	12,104	108.2	Terrestrial	Yes
+Earth	1	5.97237 × 10²⁴	1.08321 × 10¹²	12,742	149.6	Terrestrial	Yes
+Mars	2	6.4171 × 10²³	1.6318 × 10¹¹	6,779	227.9	Terrestrial	Yes
+Jupiter	79	1.8982 × 10²⁷	1.43128 × 10¹⁵	139,820	778.5	Gaseous	Yes
+Saturn	83	5.6834 × 10²⁶	8.2713 × 10¹⁴	116,460	1,433.5	Gaseous	Yes
+Uranus	27	8.6810 × 10²⁵	6.833 × 10¹³	50,724	2,872.5	Gaseous	No
+Neptune	14	1.02413 × 10²⁶	6.254 × 10¹³	49,244	4,495.1	Gaseous	No
+
+
+| Planet     | Number of Satellites | Mass (kg)             | Volume (km³)             | Diameter (km) | Mean Distance from Sun (million km) | Type of Planet | Observable with Naked Eye |
+|------------|----------------------|-----------------------|--------------------------|---------------|--------------------------------------|----------------|---------------------------|
+| Mercury    | 0                    | 3.3011 × 10²³         | 6.083 × 10¹⁰             | 4,880         | 57.9                                 | Terrestrial    | Yes                       |
+| Venus      | 0                    | 4.8675 × 10²⁴         | 9.2843 × 10¹¹            | 12,104        | 108.2                                | Terrestrial    | Yes                       |
+| Earth      | 1                    | 5.97237 × 10²⁴        | 1.08321 × 10¹²           | 12,742        | 149.6                                | Terrestrial    | Yes                       |
+| Mars       | 2                    | 6.4171 × 10²³         | 1.6318 × 10¹¹            | 6,779         | 227.9                                | Terrestrial    | Yes                       |
+| Jupiter    | 79                   | 1.8982 × 10²⁷         | 1.43128 × 10¹⁵           | 139,820       | 778.5                                | Gaseous        | Yes                       |
+| Saturn     | 83                   | 5.6834 × 10²⁶         | 8.2713 × 10¹⁴            | 116,460       | 1,433.5                              | Gaseous        | Yes                       |
+| Uranus     | 27                   | 8.6810 × 10²⁵         | 6.833 × 10¹³             | 50,724        | 2,872.5                              | Gaseous        | No                        |
+| Neptune    | 14                   | 1.02413 × 10²⁶        | 6.254 × 10¹³             | 49,244        | 4,495.1                              | Gaseous        | No                        |
+
+| Planet     | Satellites<br>(Number) | Mass<br>(kg)          | Volume<br>(km³)          | Diameter<br>(km) | Distance from<br>Sun (mln km) | Orbital<br>Period (years) | Rotation<br>Period (days) | Type of<br>Planet | Observable<br>with Naked Eye |
+|------------|-------------------------|-----------------------|--------------------------|------------------|-------------------------------|---------------------------|---------------------------|-------------------|-----------------------------|
+| Mercury    | 0                       | 3.3011 × 10²³         | 6.083 × 10¹⁰             | 4,880            | 57.9                          | 0.24                      | 58.6                      | Terrestrial       | Yes                         |
+| Venus      | 0                       | 4.8675 × 10²⁴         | 9.2843 × 10¹¹            | 12,104           | 108.2                         | 0.62                      | -243                      | Terrestrial       | Yes                         |
+| Earth      | 1                       | 5.97237 × 10²⁴        | 1.08321 × 10¹²           | 12,742           | 149.6                         | 1.00                      | 1.00                      | Terrestrial       | Yes                         |
+| Mars       | 2                       | 6.4171 × 10²³         | 1.6318 × 10¹¹            | 6,779            | 227.9                         | 1.88                      | 1.03                      | Terrestrial       | Yes                         |
+| Jupiter    | 79                      | 1.8982 × 10²⁷         | 1.43128 × 10¹⁵           | 139,820          | 778.5                         | 11.86                     | 0.41                      | Gaseous           | Yes                         |
+| Saturn     | 83                      | 5.6834 × 10²⁶         | 8.2713 × 10¹⁴            | 116,460          | 1,433.5                       | 29.46                     | 0.45                      | Gaseous           | Yes                         |
+| Uranus     | 27                      | 8.6810 × 10²⁵         | 6.833 × 10¹³             | 50,724           | 2,872.5                       | 84.01                     | -0.72                     | Gaseous           | No                          |
+| Neptune    | 14                      | 1.02413 × 10²⁶        | 6.254 × 10¹³             | 49,244           | 4,495.1                       | 164.8                     | 0.67                      | Gaseous           | No                          |
