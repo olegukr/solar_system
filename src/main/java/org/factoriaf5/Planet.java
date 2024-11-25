@@ -35,17 +35,17 @@ final double asteroidBeltFinishAU = 3.4;
 final double oneAUinKm = 149597870;
 
 
-    String name;
-    int numberOfSatellites = 0;
-    double massKg = 0;
-    double volumeKm3 = 0;
-    int diameterKm = 0;
-    int distanceFromSunMlnKm = 0;
-    TypeOfPlanet type;
-    boolean observable;
+    private String name;
+    private int numberOfSatellites = 0;
+    private double massKg = 0;
+    private double volumeKm3 = 0;
+    private int diameterKm = 0;
+    private int distanceFromSunMlnKm = 0;
+    private TypeOfPlanet type;
+    private boolean observable;
 
-    double orbitalPerioYears;
-    double rotationPeriodDays;
+    private double orbitalPerioYears;
+    private double rotationPeriodDays;
 
 
     //•	The class must have a constructor that initializes the values of its respective attributes.
@@ -134,6 +134,7 @@ final double oneAUinKm = 149597870;
 
    }
 
+
 @Override
 public String toString() {
     StringBuilder sb = new StringBuilder("Planet{");
@@ -162,4 +163,12 @@ public String toString() {
     public double getRotationPeriodDays() {
         return rotationPeriodDays;
     }
+
+    // In addition, the density of each planet must be printed and whether the planet is an outer planet of the solar system.
+    public void  showPlanet() {
+        System.out.println(this.toString());
+        System.out.printf("The density of %s: %.4f%n", this.getName(), this.densityOfPlanet());
+        System.out.println("Is " + this.getName() + " an outer planet? " + this.isOuterPlanet() + "\n");
+
+   }
 }
