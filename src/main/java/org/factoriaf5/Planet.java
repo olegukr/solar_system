@@ -11,9 +11,6 @@ package org.factoriaf5;
 •	Type of planet according to its size, of enumerated type with the following possible values: GASEOUS, TERRESTRIAL and DWARF.
 •	Observable to the naked eye, of boolean type with initial value false.
 
- ***/
-
-/***
 methods:
 •	The class must have a constructor that initializes the values of its respective attributes.
 •	Define a method that returns the values of a planet's attributes.
@@ -21,6 +18,13 @@ methods:
 •	Determine whether a planet in the solar system is considered outer.
 •	An outer planet is located beyond the asteroid belt. The asteroid belt is located between 2.1 and 3.4 AU. One astronomical unit (AU) is the distance from Earth to the Sun = 1,495,978,70 km.
 •	In the main method of the App class, two planets must be created and the values of their attributes must be displayed on the screen. In addition, the density of each planet must be printed and whether the planet is an outer planet of the solar system.
+
+Extension:
+•	Add two attributes to the Planet class. 
+        The first should represent the planet's orbital period (in years). 
+        The second attribute represents the rotation period (in days).
+•	Modify the class constructor to initialize the values of these two new attributes.
+•	Modify the print method to display the values of the new attributes on the screen.
 ***/
 
 public class Planet {
@@ -56,7 +60,6 @@ final double oneAUinKm = 149597870;
         this.distanceFromSunMlnKm = distanceFromSunMlnKm;
         this.type = type;
         this.observable = observable; 
-
     }
 
     public Planet(String name, int number_of_satellites, double massKg, double volumeKm3, int diameterKm,
@@ -73,9 +76,6 @@ final double oneAUinKm = 149597870;
         this.rotationPeriodDays = rotationPeriodDays;
 
 }
-
-
-
 
     // •	Define a method that returns the values of a planet's attributes.
 
@@ -134,34 +134,26 @@ final double oneAUinKm = 149597870;
 
    }
 
-//    @Override
-//    public String toString() {
-//        return "Planet{" +
-//                "name='" + name + '\'' +
-//                ", numberOfSatellites=" + numberOfSatellites +
-//                ", massKg=" + massKg +
-//                ", volumeKm3=" + volumeKm3 +
-//                ", diameterKm=" + diameterKm +
-//                ", distanceFromSunMlnKm=" + distanceFromSunMlnKm +
-//                ", type=" + type +
-//                ", observable=" + observable +
-//                '}';
+@Override
+public String toString() {
+    StringBuilder sb = new StringBuilder("Planet{");
+    sb.append("name='").append(name).append('\'');
+    sb.append(", numberOfSatellites=").append(numberOfSatellites);
+    sb.append(", massKg=").append(massKg);
+    sb.append(", volumeKm3=").append(volumeKm3);
+    sb.append(", diameterKm=").append(diameterKm);
+    sb.append(", distanceFromSunMlnKm=").append(distanceFromSunMlnKm);
+    sb.append(", type=").append(type);
+    sb.append(", observable=").append(observable);
 
-    @Override
-    public String toString() {
-        return "Planet{" +
-                "name='" + name + '\'' +
-                ", numberOfSatellites=" + numberOfSatellites +
-                ", massKg=" + massKg +
-                ", volumeKm3=" + volumeKm3 +
-                ", diameterKm=" + diameterKm +
-                ", distanceFromSunMlnKm=" + distanceFromSunMlnKm +
-                ", type=" + type +
-                ", observable=" + observable +
-                ", OrbitalPerioYears=" +orbitalPerioYears +
-                ", RotationPeriodDays=" + rotationPeriodDays+
-                           '}';
-   }
+    // Include orbitalPeriodYears and rotationPeriodDays only if initialized
+    if (orbitalPerioYears != 0 || rotationPeriodDays != 0) {
+        sb.append(", orbitalPeriodYears=").append(orbitalPerioYears);
+        sb.append(", rotationPeriodDays=").append(rotationPeriodDays);
+    }
+    sb.append('}');
+    return sb.toString();
+}
 
     public double getOrbitalPerioYears() {
         return orbitalPerioYears;
