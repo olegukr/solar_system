@@ -1,6 +1,7 @@
 
  # Solar System (*67)
 
+
 Giacomo F5 Classroom
 •
 November 18th.
@@ -118,3 +119,50 @@ Neptune	14	1.02413 × 10²⁶	6.254 × 10¹³	49,244	4,495.1	Gaseous	No
 | Saturn     | 83                      | 5.6834 × 10²⁶         | 8.2713 × 10¹⁴            | 116,460          | 1,433.5                       | 29.46                     | 0.45                      | Gaseous           | Yes                         |
 | Uranus     | 27                      | 8.6810 × 10²⁵         | 6.833 × 10¹³             | 50,724           | 2,872.5                       | 84.01                     | -0.72                     | Gaseous           | No                          |
 | Neptune    | 14                      | 1.02413 × 10²⁶        | 6.254 × 10¹³             | 49,244           | 4,495.1                       | 164.8                     | 0.67                      | Gaseous           | No                          |
+
+```mermaid
+classDiagram
+    class App {
+        +main(String[] args)
+    }
+
+    class Planet {
+        +final double asteroidBeltStartAU
+        +final double asteroidBeltFinishAU
+        +final double oneAUinKm
+        +String name
+        +int numberOfSatellites
+        +double massKg
+        +double volumeKm3
+        +int diameterKm
+        +int distanceFromSunMlnKm
+        +TypeOfPlanet type
+        +boolean observable
+        +double orbitalPerioYears
+        +double rotationPeriodDays
+        +String getName()
+        +int getNumberOfSatellites()
+        +double getMassKg()
+        +double getVolumeKm3()
+        +int getDiameterKm()
+        +int getDistanceFromSunMlnKm()
+        +TypeOfPlanet getType()
+        +boolean isObservable()
+        +double getOrbitalPerioYears()
+        +double getRotationPeriodDays()
+        +double densityOfPlanet()
+        +boolean isOuterPlanet()
+        +String toString()
+        +void validateAttributes()
+    }
+
+    class TypeOfPlanet {
+        <<enumeration>>
+        GASEOUS
+        TERRESTRIAL
+        DWARF
+    }
+
+    %% Relationships
+    App --> Planet : uses
+    Planet --> TypeOfPlanet : uses

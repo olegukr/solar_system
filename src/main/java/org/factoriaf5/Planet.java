@@ -125,7 +125,7 @@ final double oneAUinKm = 149597870;
 
    // •	Calculate the density of the planet, as the quotient between its mass and its volume.
     public double densityOfPlanet() {
-       return this.massKg/(this.volumeKm3 * 1000);
+       return this.massKg/(this.volumeKm3 * 1.0E9);
     }
 
     // •	Determine whether a planet in the solar system is considered outer.
@@ -138,18 +138,18 @@ final double oneAUinKm = 149597870;
 public String toString() {
     StringBuilder sb = new StringBuilder("Planet{");
     sb.append("name='").append(name).append('\'');
-    sb.append(", numberOfSatellites=").append(numberOfSatellites);
-    sb.append(", massKg=").append(massKg);
-    sb.append(", volumeKm3=").append(volumeKm3);
-    sb.append(", diameterKm=").append(diameterKm);
-    sb.append(", distanceFromSunMlnKm=").append(distanceFromSunMlnKm);
-    sb.append(", type=").append(type);
-    sb.append(", observable=").append(observable);
+    sb.append(", \nnumberOfSatellites=").append(numberOfSatellites);
+    sb.append(", \nmassKg=").append(massKg);
+    sb.append(", \nvolumeKm3=").append(volumeKm3);
+    sb.append(", \ndiameterKm=").append(diameterKm);
+    sb.append(", \ndistanceFromSunMlnKm=").append(distanceFromSunMlnKm);
+    sb.append(", \ntype=").append(type);
+    sb.append(", \nobservable=").append(observable);
 
     // Include orbitalPeriodYears and rotationPeriodDays only if initialized
     if (orbitalPerioYears != 0 || rotationPeriodDays != 0) {
-        sb.append(", orbitalPeriodYears=").append(orbitalPerioYears);
-        sb.append(", rotationPeriodDays=").append(rotationPeriodDays);
+        sb.append(", \norbitalPeriodYears=").append(orbitalPerioYears);
+        sb.append(", \n rotationPeriodDays=").append(rotationPeriodDays);
     }
     sb.append('}');
     return sb.toString();
